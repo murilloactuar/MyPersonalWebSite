@@ -1,5 +1,5 @@
 window.onload = function() {
-	(function replaceAge() {
+	(function murillosAge() {
 		let template = document.getElementById('age').innerHTML;
 
 		const bornDate = new Date('10/02/1990');
@@ -11,3 +11,11 @@ window.onload = function() {
 		document.getElementById('age').innerHTML = template;
 	})();
 };
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("hour").innerHTML = t;
+}
+
+var myVar = setInterval(function(){ myTimer() }, 1000);
