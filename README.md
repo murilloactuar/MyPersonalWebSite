@@ -2,7 +2,7 @@
 
 Development mode:
 - Serve:
-npm install -g http-server
+$ npm install -g http-server
 
 - Run:
-http-server ./ -p 80
+$ http-server ./ -p 80
