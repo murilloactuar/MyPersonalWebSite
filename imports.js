@@ -1,4 +1,8 @@
-const importPaths = [
+const components = [
+	['components/append-tag.js'],
+]
+
+const paths = [
 	['scripts.js'],
 	['my-tag/my-tag.js'],
 	['your-tag/your-tag.js'],
@@ -16,19 +20,32 @@ const importPaths = [
 				script.onload = script.onreadystatechange = null;
 				script = undefined;
 
-				if(!isAbort) { if(callback) callback(); }
+				if(!isAbort) {
+					if(callback) {
+						console.log('innerCallback', callback);
+						callback;
+					}
+				}
 			}
 		};
 
 		script.src = source;
 		prior.parentNode.insertBefore(script, prior);
+		console.log('innerCallback', source);
+		callback;
+	}
+
+	function importSources(sources, callback) {
+		for (let source of sources) {
+			insertScript(source, callback);
+		}
+		console.log('outterCallback', sources);
+		callback;
 	}
 
 	(function importScripts() {
-		for (let source of importPaths) {
-			insertScript(source, null);
-			console.log(source);
-		}
+		// FIRST IMPORT THE COMPONENTS, THEN, AFTER THE CALLBACK, IMPORT THE PATHS
+		importSources(paths, importSources(components));
 	})();
 
 })();
