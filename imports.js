@@ -1,5 +1,5 @@
 const components = [
-	['components/append-tag.js'],
+	['components/append-tags.js'],
 ]
 
 const paths = [
