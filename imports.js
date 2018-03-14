@@ -42,7 +42,7 @@ let scriptIndex = 0;
 		promiseImportComponents().then(function() {
 			setTimeout(function() {
 				return importSources(modules);
-			}, 40);
+			}, 10);
 		})
 	})();
 
