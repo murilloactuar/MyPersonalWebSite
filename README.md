@@ -5,13 +5,13 @@
 * [My Personal Website](https://murilloves.github.io/) - Running app
 
 ## Development mode:
-### Serve:
+### Install:
 npm install -g http-server
 
-### Run:
+### Serve (Run):
 http-server ./ -p 80
 
-### Listening at:
+### It should be Listening at:
 * [http://127.0.0.1](http://127.0.0.1)
 
 or
