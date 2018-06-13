@@ -6,10 +6,10 @@
 
 ## Development mode:
 ### Install:
-npm install -g http-server
+`npm install -g http-server`
 
 ### Serve (Run):
-http-server ./ -p 80
+`http-server ./ -p 80`
 
 ### It should be Listening at:
 * [http://127.0.0.1](http://127.0.0.1)
